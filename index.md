@@ -3,7 +3,7 @@ layout: default
 title: Home Page
 description: Supercomputing, dood!
 ---
-{% include header.html %} 
+<body> {% include header.html %} </body>
 <h1>KU Supercomputing Club</h1>
 We are currently
 
