@@ -1,6 +1,6 @@
 ---
 layout: default
-title: KU Supercomputing Club
+title: Home Page
 description: Supercomputing, dood!
 ---
 <h1>KU Supercomputing Club</h1>
