@@ -4,9 +4,14 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 
-<object data="blogt0.txt" type="text/plain"
-width="500" style="height: 300px">
-<a href="blogt0.txt">No Support?</a>
-</object>
+$.ajax({
+        async:false,
+        url: 'folder/file.txt',
+        dataType: 'text',
+        success: function(data) 
+        {
+        $('element').append(data);
+            }
+        });
 
 {{ content }}
