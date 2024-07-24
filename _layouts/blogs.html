@@ -4,20 +4,25 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 
-<script>
-    var txtFile = new XMLHttpRequest();
-    var allText = "file not found";
-    txtFile.onreadystatechange = function () {
-        if (txtFile.readyState === XMLHttpRequest.DONE && txtFile.status == 200) {
-            allText = txtFile.responseText;
-            allText = allText.split("\n").join("<br>");
-        }
+<body>
+    <input type="file" name="inputfile" id="inputfile">
+    <br>
 
-        document.getElementById('txt').innerHTML = allText;
-    }
-    txtFile.open("GET", 'blogt0.txt', true);
-    txtFile.send(null);
+    <pre id="output"></pre>
 
-</script>
+    <script type="text/javascript">
+        document.getElementById('inputfile')
+            .addEventListener('change', function () {
+
+                let fr = new FileReader();
+                fr.onload = function () {
+                    document.getElementById('output')
+                        .textContent = fr.result;
+                }
+
+                fr.readAsText(this.files[0]);
+            })
+    </script>
+</body>
 
 {{ content }}
