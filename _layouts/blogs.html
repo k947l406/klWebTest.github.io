@@ -5,30 +5,13 @@ layout: default
 <h1>{{ page.title }}</h1>
 
 <body>
-    <input type="file" name="inputfile" id="inputfile">
-    <br>
-
-    <pre id="output"></pre>
-
-    <script type="text/javascript">
-        document.getElementById('inputfile')
-            .addEventListener('change', function () {
-
-                let fr = new FileReader();
-                fr.onload = function () {
-                    document.getElementById('output')
-                        .textContent = fr.result;
-                }
-
-                fr.readAsText(this.files[0]);
-            })
-  const reader = new FileReader;
-  fetch("blogt0.txt")
-  .then((res) => res.text())
-  .then((text) => {
-    reader.readAsText(text);
-   })
-  .catch((e) => console.error(e));
+    <p id="blog">This is where blog text should show up.</p>
+    <script>
+        let file = "blogt0.txt"
+        
+        fetch (file)
+        .then(x => x.text())
+        .then(y => document.getElementById("blog").innerHTML = y);
     </script>
 </body>
 
