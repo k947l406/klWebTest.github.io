@@ -1,5 +1,0 @@
-Title: This is a test
-Poster: First Name Last Name 
-Content: 
-Content content content. Sentence. 
-More content.
