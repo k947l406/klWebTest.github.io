@@ -9,7 +9,7 @@ layout: default
     <script>
         let file = "blogt0.txt"
         
-        fetch (file)
+        fetch ('./blogt0.txt')
         .then(x => x.text())
         .then(y => document.getElementById("blog").innerHTML = y);
     </script>
