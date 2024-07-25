@@ -2,11 +2,12 @@
 layout: default
 title: Blog
 ---
+li {border: double}
 <h1>Latest Posts</h1>
 
 <ul>
   {% for post in site.posts %}
-    <li border: double>
+    <li>
       <h2><a href="{{ post.url }}"k>{{ post.title }}</a></h2>
       {{ post.content }}
     </li>
