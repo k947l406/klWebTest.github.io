@@ -6,9 +6,9 @@ title: Blog
 
 <ul>
   {% for post in site.posts %}
-    <li>
+    <li border: double>
       <h2><a href="{{ post.url }}"k>{{ post.title }}</a></h2>
-      {{ post.excerpt }}
+      {{ post.content }}
     </li>
   {% endfor %}
 </ul>
