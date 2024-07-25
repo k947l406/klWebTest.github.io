@@ -23,7 +23,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 collections:
   projects:
-    output = true
+    output: true
 
 # Exclude these files from production site
 exclude:
